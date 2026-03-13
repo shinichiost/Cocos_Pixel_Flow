@@ -1,0 +1,96 @@
+{
+  "ver": "2.3.13",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "8d7cc1e7-1f0a-416b-b316-783381b58dbe",
+  "files": [],
+  "subMetas": {
+    "a62fe": {
+      "importer": "gltf-mesh",
+      "uuid": "8d7cc1e7-1f0a-416b-b316-783381b58dbe@a62fe",
+      "displayName": "",
+      "id": "a62fe",
+      "name": "Scene.mesh",
+      "userData": {
+        "gltfIndex": 0,
+        "triangleCount": 128
+      },
+      "ver": "1.1.1",
+      "imported": true,
+      "files": [
+        ".bin",
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "7baee": {
+      "importer": "gltf-material",
+      "uuid": "8d7cc1e7-1f0a-416b-b316-783381b58dbe@7baee",
+      "displayName": "",
+      "id": "7baee",
+      "name": "BlueBlock.material",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "1ec5d": {
+      "importer": "gltf-scene",
+      "uuid": "8d7cc1e7-1f0a-416b-b316-783381b58dbe@1ec5d",
+      "displayName": "",
+      "id": "1ec5d",
+      "name": "Pixel 1x1.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.14",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "fbx": {
+      "smartMaterialEnabled": true
+    },
+    "lods": {
+      "enable": false,
+      "hasBuiltinLOD": false,
+      "options": [
+        {
+          "screenRatio": 0.25,
+          "faceCount": 1
+        },
+        {
+          "screenRatio": 0.125,
+          "faceCount": 0.25
+        },
+        {
+          "screenRatio": 0.01,
+          "faceCount": 0.1
+        }
+      ]
+    },
+    "assetFinder": {
+      "meshes": [
+        "8d7cc1e7-1f0a-416b-b316-783381b58dbe@a62fe"
+      ],
+      "skeletons": [],
+      "textures": [],
+      "materials": [
+        "8d7cc1e7-1f0a-416b-b316-783381b58dbe@7baee"
+      ],
+      "scenes": [
+        "8d7cc1e7-1f0a-416b-b316-783381b58dbe@1ec5d"
+      ]
+    }
+  }
+}
