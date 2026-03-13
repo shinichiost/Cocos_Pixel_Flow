@@ -13,7 +13,7 @@ export class GameManager extends Component {
 
     init(level:LevelData)
     {
-        this.spawnSystem = new SpawnSystem(level.spawnMatrix)
+        // this.spawnSystem = new SpawnSystem(level.spawnMatrix)
 
         this.queueSystem = new QueueSystem(level.queueCapacity)
     }
