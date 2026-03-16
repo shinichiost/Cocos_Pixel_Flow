@@ -3,7 +3,6 @@ import { LevelData } from '../data';
 import { BoardSpawner } from './BoardSpawner';
 const { ccclass, property } = _decorator;
 
-@ccclass('LevelSpawner')
 export class LevelSpawner {
     levelData: LevelData;
     constructor(levelData: LevelData) {

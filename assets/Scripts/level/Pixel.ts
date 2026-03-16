@@ -5,10 +5,10 @@ import { PixelData } from "../"
 export class Pixel extends Component {
     @property(MeshRenderer)
     renderer:MeshRenderer = null
-    data:PixelData
-    setUp(data:PixelData):Pixel
+    id:Number = 0
+    setUp(id: Number):Pixel
     {
-        this.data = data
+        this.id = id
         return this
     }
     setColor(color:Color){

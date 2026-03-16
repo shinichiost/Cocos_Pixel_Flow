@@ -1,17 +1,17 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, CCInteger, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('GunData')
 export class GunData  {
-    @property(Number)
-    bullet: number = 20;
-    @property(Number)
-    damage: number = 1;
+    @property(CCInteger)
+    bullet = 20;
+    @property(CCInteger)
+    damage = 1;
 }
 
 
-@ccclass('GunGroupData')
-export class GunGroupData  {
+@ccclass('LauncherAreaData')
+export class LauncherAreaData  {
     @property([GunData])
     listGunData: GunData[] = [];
 }

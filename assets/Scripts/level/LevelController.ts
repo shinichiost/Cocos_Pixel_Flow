@@ -1,39 +1,37 @@
-import { _decorator, Component, Node, resources, JsonAsset } from 'cc';
-import { LevelSpawner } from '../';
-import { BoardData, LevelData } from '../';
-import { GunData } from '../data/GunData';
+import { _decorator, Component, Node, resources, JsonAsset, Enum } from 'cc';
+import { LevelSpawner } from './LevelSpawner';
+import { BoardData, LevelData } from '../data';
+import { GunData } from '../data';
 const { ccclass, property } = _decorator;
-enum DataType {
+export enum DataType {
     Editor,
     File,
 } 
 @ccclass('LevelController')
 export class LevelController extends Component {
-    @property({ type: DataType })
+    @property({ type: Enum(DataType) })
     dataType: DataType = DataType.Editor;
 
     @property(Node)
     levelNode: Node = null;
 
     // Editor data setup
-    @property({ type: LevelData })
-    levelData: LevelData = null;
+    @property(LevelData)
+    levelData: LevelData = new LevelData();
 
     // File path for JSON resource
-    @property({ type: String })
+    @property
     jsonFilePath: string = '';
 
     levelSpawner: LevelSpawner = null;
 
     start() {
-        this.loadLevelData();
-        this.levelSpawner = new LevelSpawner(this.levelData)
-        if (!this.levelSpawner) {
-            console.error("LevelSpawner component not found on levelNode");
-        }
+        this.loadLevelData(0);
+        this.levelSpawner = new LevelSpawner(this.levelData);
+        this.levelSpawner.LoadLevel(this.levelData);
     }
 
-    loadLevelData() {
+    loadLevelData(levelId = 0) {
         if (this.dataType === DataType.Editor) {
             if (this.levelData ) {
                 this.levelSpawner.LoadLevel(this.levelData);
@@ -42,7 +40,7 @@ export class LevelController extends Component {
             }
         } else if (this.dataType === DataType.File) {
             if (this.jsonFilePath) {
-                resources.load(this.jsonFilePath, JsonAsset, (err, asset) => {
+                resources.load(String.bind (this.jsonFilePath,levelId), JsonAsset, (err, asset) => {
                     if (err) {
                         console.error('Failed to load JSON file:', err);
                         return;
