@@ -1,0 +1,19 @@
+{
+  "name": "remove-missing-script",
+  "version": "1.0.0",
+  "main": "main.js",
+  "contributions": {
+    "menu": [
+      {
+        "path": "Node",
+        "label": "Remove Missing Scripts",
+        "message": "remove"
+      }
+    ],
+    "messages": {
+      "remove": {
+        "methods": ["remove"]
+      }
+    }
+  }
+}

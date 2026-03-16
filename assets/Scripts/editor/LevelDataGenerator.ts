@@ -6,9 +6,9 @@ const { ccclass, property, executeInEditMode } = _decorator
 
 declare var Editor: any;
 
-@ccclass('LevelGenerator')
+@ccclass('LevelDataGenerator')
 @executeInEditMode(true)
-export class LevelGenerator extends Component {
+export class LevelDataGenerator extends Component {
 
     @property(ImageAsset)
     sourceImage: ImageAsset = null

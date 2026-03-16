@@ -1,14 +1,12 @@
-import { _decorator, Component, Node } from 'cc';
-const { ccclass, property } = _decorator;
+import { BoardData } from '../data';
+import { Pooler } from '../utils';
+import { PoolType } from '../utils/PoolType';
 
-@ccclass('BoardSpawner')
-export class BoardSpawner extends Component {
-    start() {
-
-    }
-
-    update(deltaTime: number) {
-        
+export class BoardSpawner {
+    boardData: BoardData = new BoardData();
+    create(boardData:BoardData) {
+        var pixelNode = Pooler.instance.get(PoolType.Pixel);
     }
 }
-
+
+

@@ -1,7 +1,5 @@
 import { _decorator, Component } from 'cc'
-import { SpawnSystem } from '../systems/SpawnSystem'
-import { QueueSystem } from '../systems/QueueSystem'
-import { LevelData } from '../data/LevelData'
+import { SpawnSystem,QueueSystem,LevelData } from '../'
 
 const { ccclass } = _decorator
 

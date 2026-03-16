@@ -6,7 +6,12 @@ export class PixelColorManager extends Component {
 
     @property([Color])
     colors:Color[] = []
+static instance:PixelColorManager
 
+    onLoad()
+    {
+        PixelColorManager.instance = this
+    }
     colorToID(r:number,g:number,b:number){
 
         let best = 0
@@ -30,6 +35,10 @@ export class PixelColorManager extends Component {
         }
 
         return best
+    }
+    getColor(id:number):Color
+    {
+        return this.colors[id]
     }
 
 }
